@@ -17,7 +17,9 @@ public class MakeUtils {
     private static final String XML_HEADER = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n";
     private static final String XML_RESOURCE_START = "<resources>\r\n";
     private static final String XML_RESOURCE_END = "</resources>\r\n";
-    private static final String XML_DIMEN_TEMPLETE = "<dimen name=\"qb_%1$spx_%2$d\">%3$.2fdp</dimen>\r\n";
+
+    //                                               <dimen name="qb_px_7">8.40dp</dimen>
+    private static final String XML_DIMEN_TEMPLETE = "<dimen name=\"%1$sdp_%2$d\">%3$.2fdp</dimen>\r\n";
 
    
     private static final String XML_BASE_DPI = "<dimen name=\"base_dpi\">%ddp</dimen>\r\n";
@@ -38,7 +40,7 @@ public class MakeUtils {
     
 
     /**
-     * 生成所有的尺寸数据
+     *
      *
      * @param type
      * @return
@@ -50,7 +52,6 @@ public class MakeUtils {
         try {
             sb.append(XML_HEADER);
             sb.append(XML_RESOURCE_START);
-            //备份生成的相关信息
             temp = String.format(XML_BASE_DPI, type.getSwWidthDp());
             sb.append(temp);
             for (int i = 0; i <= MAX_SIZE; i++) {

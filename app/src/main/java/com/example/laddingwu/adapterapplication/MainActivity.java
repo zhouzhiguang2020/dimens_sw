@@ -3,6 +3,7 @@ package com.example.laddingwu.adapterapplication;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -25,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 DisplayMetrics dm = new DisplayMetrics();
                 getWindowManager().getDefaultDisplay().getMetrics(dm);
+                Log.e("查看宽度：",String.valueOf(dm.widthPixels));
+                Log.e("查看高度：",String.valueOf(dm.heightPixels));
                 int width = Math.min(dm.widthPixels,dm.heightPixels);
                 tv1.setText("dpi : "+dm.densityDpi +"   smallest width pixels : "+width);
                 tv2.setText("计算出来的smallestWidth : "+width/(dm.densityDpi/160.0) +"dp");
@@ -32,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 tv4.setText("当前手机： "+SystemUtil.getDeviceBrand()+"  "+SystemUtil.getSystemModel()+ " \n"+"当前系统： "+SystemUtil.getSystemVersion()+ " ");
                 LinearLayout.LayoutParams p= (LinearLayout.LayoutParams) view.getLayoutParams();
                 p.width = getResources().getDimensionPixelSize(R.dimen.qb_px_375);
+
                 view.setLayoutParams(p);
             }
         },500);
