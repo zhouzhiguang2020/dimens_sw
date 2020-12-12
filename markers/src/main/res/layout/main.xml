@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:markers="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/transparent">
+
+    <include
+        android:id="@+id/actionbar"
+        layout="@layout/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_height" />
+
+    <include
+        android:id="@+id/colors"
+        layout="@layout/colors_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_gravity="bottom" />
+
+    <include
+        android:id="@+id/tools"
+        layout="@layout/tools"
+        android:layout_width="52dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:layout_marginTop="@dimen/action_bar_height"
+        android:layout_marginBottom="96dp" />
+
+    <org.dsandler.apps.markers.LogoView
+        android:id="@+id/logo"
+        android:layout_width="@dimen/action_bar_logo_width"
+        android:layout_height="@dimen/action_bar_height"
+        android:layout_gravity="top|left"
+        android:alpha="0.5"
+        android:onClick="clickLogo"
+        android:padding="2dp"
+        android:src="@drawable/markers" />
+
+</FrameLayout>
