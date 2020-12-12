@@ -2,6 +2,7 @@ package com.example.laddingwu.adapterapplication
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
+import com.apkfuns.logutils.LogUtils
 
 /**
  * Created by .
@@ -11,4 +12,7 @@ import androidx.lifecycle.AndroidViewModel
  */
 class BackViewModel(application: Application) : AndroidViewModel(application) {
 
+    fun Test() {
+        LogUtils.e("你妹妹的")
+    }
 }

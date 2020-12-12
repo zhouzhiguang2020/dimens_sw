@@ -22,7 +22,7 @@ class NavUtilsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_nav_utils_layout)
         button1.setOnClickListener {
-
+            viewModel.Test()
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.P) {
                 var mBiometricPrompt = BiometricPrompt.Builder(this)
                         .setTitle("指纹验证")
