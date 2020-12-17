@@ -64,5 +64,9 @@ class NavUtilsActivity : AppCompatActivity() {
 
             }
         }
+        button2.setOnClickListener {
+            var intent = Intent(this, TestActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
