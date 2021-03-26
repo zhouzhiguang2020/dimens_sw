@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.laddingwu.adapterapplication">
+    package="com.wljy.studymodle">
 
     <application
         android:allowBackup="true"
@@ -8,12 +8,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity3"></activity>
-        <activity android:name=".MainActivity2" />
-        <activity android:name=".TestActivity" />
-        <activity android:name=".NavUtilsActivity" />
-        <activity android:name=".MainTestActivity" />
+        android:theme="@style/Theme.Dimens_sw">
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,8 +17,5 @@
             </intent-filter>
         </activity>
     </application>
-    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
-
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
 </manifest>

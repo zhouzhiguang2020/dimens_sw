@@ -1,3 +1,4 @@
+include ':studymodle'
 include ':imuisample'
 include ':imui'
 include ':chatinput'
