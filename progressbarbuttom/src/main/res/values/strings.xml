@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MaterialProgress</string>
+    <string name="loading">Submitting</string>
+    <string name="submitted">Done</string>
+    <string name="submit">Submit</string>
+    <string name="animatedDrawable">Animated Drawable</string>
+    <string name="progressRight">Progress right</string>
+    <string name="progressLeft">Progress left</string>
+    <string name="progressCustomStyle">Progress styled</string>
+    <string name="mixedBehaviour">Mixed behaviour</string>
+    <string name="saved">Saved</string>
+    <string name="progressCenter">Progress center</string>
+    <string name="openProgressButtons">See Progress Buttons</string>
+    <string name="openDrawableButtons">See animated drawable buttons</string>
+    <string name="openRecyclerView">see recycler view example</string>
+    <string name="openProgressButtonsJava">See Progress Buttons In Java</string>
+    <string name="openDrawableButtonsJava">See animated drawable buttons In Java</string>
+    <string name="openRecyclerViewJava">see recycler view example In Java</string>
+</resources>

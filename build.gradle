@@ -3,14 +3,26 @@
 buildscript {
     
     ext {
-        kotlin_version = '1.4.21'
+        ext.kotlin_version = '1.5.10'
     }
     repositories {
+        mavenCentral()
         google()
-        jcenter()
+        // 阿里云云效仓库：https://maven.aliyun.com/mvn/guide
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        // 华为开源镜像：https://mirrors.huaweicloud.com
+        maven { url 'https://repo.huaweicloud.com/repository/maven' }
+        // JitPack 远程仓库：https://jitpack.io
+        maven { url 'https://jitpack.io' }
+        // MavenCentral 远程仓库：https://mvnrepository.com
+
+        maven {
+            url 'http://mirrors.huaweicloud.com/repository/maven/huaweicloudsdk/'
+        }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.1.2'
+        classpath 'com.android.tools.build:gradle:4.2.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
 
@@ -21,8 +33,20 @@ buildscript {
 
 allprojects {
     repositories {
+        mavenCentral()
         google()
-        jcenter()
+        // 阿里云云效仓库：https://maven.aliyun.com/mvn/guide
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        // 华为开源镜像：https://mirrors.huaweicloud.com
+        maven { url 'https://repo.huaweicloud.com/repository/maven' }
+        // JitPack 远程仓库：https://jitpack.io
+        maven { url 'https://jitpack.io' }
+        // MavenCentral 远程仓库：https://mvnrepository.com
+
+        maven {
+            url 'http://mirrors.huaweicloud.com/repository/maven/huaweicloudsdk/'
+        }
     }
 }
 

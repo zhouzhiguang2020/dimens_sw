@@ -1,6 +1,4 @@
+include ':progressbarbuttom'
 include ':studymodle'
-include ':imuisample'
-include ':imui'
-include ':chatinput'
+
 include ':app', ':lib'
-include ':markers'
