@@ -7,6 +7,7 @@ import android.hardware.biometrics.BiometricPrompt
 import android.os.Bundle
 import android.os.CancellationSignal
 import android.util.Log
+import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NavUtils
@@ -68,5 +69,12 @@ class NavUtilsActivity : AppCompatActivity() {
             var intent = Intent(this, TestActivity::class.java)
             startActivity(intent)
         }
+        button3.setOnClickListener(object :View.OnClickListener{
+            override fun onClick(v: View?) {
+                var intent = Intent(this@NavUtilsActivity, ShootVideoActivity::class.java)
+                startActivity(intent)
+            }
+
+        })
     }
 }
