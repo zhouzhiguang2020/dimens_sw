@@ -6,6 +6,7 @@
     android:layout_height="match_parent">
 
     <LinearLayout
+        android:id="@+id/top_layout"
         android:layout_width="0dp"
         android:layout_height="@dimen/qb_px_50"
         android:orientation="horizontal"
@@ -22,6 +23,7 @@
             android:text="第一个"
             android:textColor="@color/black"
             android:textSize="@dimen/qb_px_16" />
+
         <Button
             android:id="@+id/button2"
             android:layout_width="@dimen/qb_px_80"
@@ -31,15 +33,39 @@
             android:text="第二个"
             android:textColor="@color/black"
             android:textSize="@dimen/qb_px_16" />
+
         <Button
             android:id="@+id/button3"
             android:layout_width="@dimen/qb_px_80"
             android:layout_height="@dimen/qb_px_50"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="测试录屏"
+            android:text="\u4e0d\u80fd\u91cd\u590d\u8ba4\u8bc1"
             android:textColor="@color/black"
             android:textSize="@dimen/qb_px_16" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="@dimen/qb_px_80"
+            android:layout_height="@dimen/qb_px_50"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="测试跳转"
+            android:textColor="@color/black"
+            android:textSize="@dimen/qb_px_16" />
+
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/return_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="返回什么数据啊"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="@dimen/qb_px_20"
+        android:textSize="@dimen/qb_px_16"
+        android:textColor="@color/black10"
+        app:layout_constraintTop_toBottomOf="@+id/top_layout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

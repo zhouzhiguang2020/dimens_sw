@@ -61,7 +61,7 @@ public class CommonConfig {
             cachePath = DevelopmentTestingApplication.Companion.getContext().getCacheDir().getPath();
         }
         this.PATH_APP_CACHE = cachePath + File.separator + "Cache";
-        this.PATH_APP_ROOT = com.example.laddingwu.adapterapplication.utils.FileUtils.getAppRootPath(DevelopmentTestingApplication.Companion.getInstance()).getAbsolutePath() + File.separator + "FEG" + File.separator + "snapshot";
+        this.PATH_APP_ROOT = cachePath+ File.separator + "FEG" + File.separator + "snapshot";
         this.PATH_APP_DOWNLOAD = PATH_APP_ROOT + File.separator + "Download";
         this.PATH_APP_IMAGE = PATH_APP_ROOT + File.separator + "Images";
         this.PATH_APP_VOICE = PATH_APP_ROOT + File.separator + "voice";

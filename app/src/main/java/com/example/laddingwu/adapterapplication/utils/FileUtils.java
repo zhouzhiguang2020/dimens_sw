@@ -5,6 +5,8 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.os.Environment;
 
+import com.apkfuns.logutils.LogUtils;
+
 import java.io.File;
 
 /**
@@ -12,13 +14,31 @@ import java.io.File;
  */
 public class FileUtils {
     public static File getAppRootPath(Context context) {
-        if (sdCardIsAvailable()) {
-            return Environment.getExternalStorageDirectory();
-        } else {
-            return context.getFilesDir();
+        if (context != null) {
+            if (sdCardIsAvailable()) {
+                LogUtils.e("可用");
+                return Environment.getExternalStorageDirectory();
+            } else {
+                LogUtils.e("不可用");
+                return context.getExternalCacheDir( );
+            }
         }
+        return null;
     }
 
+
+
+    public static String getDiskCacheDir(Context context) {
+        String cachePath = null;
+        LogUtils.e("查看content："+context==null);
+        if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())
+                || !Environment.isExternalStorageRemovable()) {
+            cachePath = context.getExternalCacheDir().getPath();
+        } else {
+            cachePath = context.getCacheDir().getPath();
+        }
+        return cachePath;
+    }
     public static boolean sdCardIsAvailable() {
         if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
             File sd = new File(Environment.getExternalStorageDirectory().getAbsolutePath());

@@ -18,15 +18,15 @@ buildscript {
         // MavenCentral 远程仓库：https://mvnrepository.com
 
         maven {
-            url 'http://mirrors.huaweicloud.com/repository/maven/huaweicloudsdk/'
+            url 'https://mirrors.huaweicloud.com/repository/maven/huaweicloudsdk/'
         }
         maven {
-            url 'http://oss.jfrog.org/artifactory/oss-snapshot-local'
+            url 'https://oss.jfrog.org/artifactory/oss-snapshot-local'
         }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.2.2'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.android.tools.build:gradle:7.0.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.21"
         //classpath "io.realm:realm-gradle-plugin:7.0.8"
         //classpath "io.realm:realm-gradle-plugin:7.1.0-SNAPSHOT"
         // NOTE: Do not place your application dependencies here; they belong
@@ -48,10 +48,10 @@ allprojects {
         // MavenCentral 远程仓库：https://mvnrepository.com
 
         maven {
-            url 'http://mirrors.huaweicloud.com/repository/maven/huaweicloudsdk/'
+            url 'https://mirrors.huaweicloud.com/repository/maven/huaweicloudsdk/'
         }
         maven {
-            url 'http://oss.jfrog.org/artifactory/oss-snapshot-local'
+            url 'https://oss.jfrog.org/artifactory/oss-snapshot-local'
         }
     }
 }

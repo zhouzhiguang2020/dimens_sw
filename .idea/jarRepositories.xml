@@ -76,5 +76,15 @@
       <option name="name" value="maven6" />
       <option name="url" value="http://oss.jfrog.org/artifactory/oss-snapshot-local" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven5" />
+      <option name="name" value="maven5" />
+      <option name="url" value="https://mirrors.huaweicloud.com/repository/maven/huaweicloudsdk/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven6" />
+      <option name="name" value="maven6" />
+      <option name="url" value="https://oss.jfrog.org/artifactory/oss-snapshot-local" />
+    </remote-repository>
   </component>
 </project>
