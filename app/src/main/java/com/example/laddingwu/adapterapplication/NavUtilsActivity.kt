@@ -101,10 +101,12 @@ class NavUtilsActivity : AppCompatActivity() {
         })
         button4.setOnClickListener {
            // myActivityLauncher.launch("我要传入数据有点大你忍一忍")
-            var path= com.example.laddingwu.adapterapplication.utils.FileUtils.getAppRootPath(this)
-            val uri: Uri = Uri.parse(path.absolutePath)
-            myActivityLauncher1.launch(uri)
-            LogUtils.e("传入path是："+uri.toString())
+            var intent = Intent(this@NavUtilsActivity, MainActivity4::class.java)
+            startActivity(intent)
+//            var path= com.example.laddingwu.adapterapplication.utils.FileUtils.getAppRootPath(this)
+//            val uri: Uri = Uri.parse(path.absolutePath)
+//            myActivityLauncher1.launch(uri)
+//            LogUtils.e("传入path是："+uri.toString())
         }
     }
 }

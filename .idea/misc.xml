@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/code/dimens_sw/app/src/main/res/layout/activity_main4.xml" value="0.2046875" />
         <entry key="..\:/code/dimens_sw/app/src/main/res/layout/activity_nav_utils_layout.xml" value="0.1140625" />
         <entry key="..\:/code/dimens_sw/app/src/main/res/layout/activity_test_result_layout.xml" value="0.1140625" />
+        <entry key="..\:/code/dimens_sw/app/src/main/res/layout/fragment_blank.xml" value="0.2046875" />
       </map>
     </option>
   </component>

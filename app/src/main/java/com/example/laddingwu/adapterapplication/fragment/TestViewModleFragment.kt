@@ -7,8 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import com.example.laddingwu.adapterapplication.R
 import com.example.laddingwu.adapterapplication.view.MyViewModel
+import kotlinx.coroutines.launch
 
 
 /**
@@ -35,10 +39,6 @@ class TestViewModleFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_test_view_modle_layout, container, false)
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel.testfun()
 
-    }
 
 }
