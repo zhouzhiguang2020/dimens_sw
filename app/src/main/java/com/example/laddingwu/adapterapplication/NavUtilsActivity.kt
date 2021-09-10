@@ -108,5 +108,9 @@ class NavUtilsActivity : AppCompatActivity() {
 //            myActivityLauncher1.launch(uri)
 //            LogUtils.e("传入path是："+uri.toString())
         }
+        button5.setOnClickListener{
+            var intent = Intent(this@NavUtilsActivity, MainActivity5::class.java)
+            startActivity(intent)
+        }
     }
 }
