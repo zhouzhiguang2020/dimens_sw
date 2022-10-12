@@ -28,7 +28,7 @@ class MainActivity5 : ComponentActivity() {
         }
     }
 
-    @Preview(showBackground = true)
+
     @Composable
     fun MessageCard(name: String) {
         Column(modifier = Modifier.fillMaxWidth(), verticalArrangement = Arrangement.Top) {

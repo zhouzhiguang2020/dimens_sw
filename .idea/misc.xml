@@ -7,6 +7,15 @@
         <entry key="..\:/code/dimens_sw/app/src/main/res/layout/activity_nav_utils_layout.xml" value="0.1140625" />
         <entry key="..\:/code/dimens_sw/app/src/main/res/layout/activity_test_result_layout.xml" value="0.1140625" />
         <entry key="..\:/code/dimens_sw/app/src/main/res/layout/fragment_blank.xml" value="0.2046875" />
+        <entry key="..\:/github/dimens_sw/jpushtest/src/main/res/drawable/d_shape_btn.xml" value="0.1" />
+        <entry key="..\:/github/dimens_sw/jpushtest/src/main/res/drawable/d_shape_toast_bg.xml" value="0.1" />
+        <entry key="..\:/github/dimens_sw/jpushtest/src/main/res/layout/activity_main.xml" value="0.1203125" />
+        <entry key="..\:/github/dimens_sw/jpushtest/src/main/res/layout/d_content_main.xml" value="0.1515625" />
+        <entry key="..\:/github/dimens_sw/jpushtest/src/main/res/layout/d_dialog_msg.xml" value="0.14635416666666667" />
+        <entry key="..\:/github/dimens_sw/jpushtest/src/main/res/layout/d_dialog_two_button.xml" value="0.14635416666666667" />
+        <entry key="..\:/github/dimens_sw/jpushtest/src/main/res/layout/d_tab_layout.xml" value="0.14635416666666667" />
+        <entry key="..\:/github/dimens_sw/jpushtest/src/main/res/layout/d_title_layout.xml" value="0.1515625" />
+        <entry key="..\:/github/dimens_sw/jpushtest/src/main/res/layout/d_toast_customs.xml" value="0.1515625" />
       </map>
     </option>
   </component>

@@ -21,6 +21,7 @@ class MainActivity4 : AppCompatActivity() {
         LogUtils.w("看看为空吗：" + temp == null)
 //        transaction.hide(temp!!)
 //        transaction.commit()
+
     }
 
 }

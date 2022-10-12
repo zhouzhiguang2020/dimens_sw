@@ -1,5 +1,6 @@
 package com.example.laddingwu.adapterapplication
 
+import android.app.Activity
 import android.content.DialogInterface
 import android.content.Intent
 import android.hardware.biometrics.BiometricPrompt
@@ -8,11 +9,13 @@ import android.net.Uri
 import android.os.Bundle
 import android.os.CancellationSignal
 import android.os.FileUtils
+import android.provider.MediaStore
 import android.util.Log
 import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.ui.unit.ExperimentalUnitApi
 import androidx.core.app.NavUtils
 
 import com.apkfuns.logutils.LogUtils
@@ -34,6 +37,7 @@ class NavUtilsActivity : AppCompatActivity() {
             LogUtils.e("选择了一个目录后：" + it.toString())
         }
 
+    @OptIn(ExperimentalUnitApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_nav_utils_layout)
@@ -100,7 +104,7 @@ class NavUtilsActivity : AppCompatActivity() {
 
         })
         button4.setOnClickListener {
-           // myActivityLauncher.launch("我要传入数据有点大你忍一忍")
+            // myActivityLauncher.launch("我要传入数据有点大你忍一忍")
             var intent = Intent(this@NavUtilsActivity, MainActivity4::class.java)
             startActivity(intent)
 //            var path= com.example.laddingwu.adapterapplication.utils.FileUtils.getAppRootPath(this)
@@ -108,9 +112,21 @@ class NavUtilsActivity : AppCompatActivity() {
 //            myActivityLauncher1.launch(uri)
 //            LogUtils.e("传入path是："+uri.toString())
         }
-        button5.setOnClickListener{
-            var intent = Intent(this@NavUtilsActivity, MainActivity5::class.java)
-            startActivity(intent)
+        button5.setOnClickListener {
+//            var intent = Intent(this@NavUtilsActivity, MainActivity5::class.java)
+//            startActivity(intent)
+
+            val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+
+            val startActivity =
+                registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+                    //此处进行数据接收（接收回调）
+                    if (it.resultCode == Activity.RESULT_OK) {
+                        //成功数据
+                    }
+                }
+            //跳转方式
+            startActivity.launch(intent)
         }
     }
 }

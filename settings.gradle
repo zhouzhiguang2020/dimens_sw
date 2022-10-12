@@ -2,3 +2,4 @@ include ':progressbarbuttom'
 include ':studymodle'
 
 include ':app', ':lib'
+include ':jpushtest'

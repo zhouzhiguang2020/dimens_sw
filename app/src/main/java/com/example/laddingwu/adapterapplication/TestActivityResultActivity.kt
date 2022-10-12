@@ -12,6 +12,7 @@ class TestActivityResultActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test_result_layout)
         var msg = intent.getStringExtra("text")
+
         LogUtils.e("哥们接收到的数据是：" + msg)
         text.setOnClickListener {
             var intent = Intent()
