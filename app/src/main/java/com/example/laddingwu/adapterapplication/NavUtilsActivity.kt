@@ -3,6 +3,7 @@ package com.example.laddingwu.adapterapplication
 import android.app.Activity
 import android.content.DialogInterface
 import android.content.Intent
+import android.content.pm.ActivityInfo
 import android.hardware.biometrics.BiometricPrompt
 import android.net.Uri
 
@@ -19,18 +20,21 @@ import androidx.compose.ui.unit.ExperimentalUnitApi
 import androidx.core.app.NavUtils
 
 import com.apkfuns.logutils.LogUtils
+import com.dylanc.viewbinding.binding
+import com.dylanc.viewbinding.nonreflection.binding
+import com.example.laddingwu.adapterapplication.databinding.ActivityNavUtilsLayoutBinding
 import com.example.laddingwu.adapterapplication.resultcontract.TestActivityResultContract
-import kotlinx.android.synthetic.main.activity_nav_utils_layout.*
+
 
 class NavUtilsActivity : AppCompatActivity() {
     private var TAG = "指纹识别"
     private val viewModel: BackViewModel by viewModels()
-
+    private val binding: ActivityNavUtilsLayoutBinding by binding<ActivityNavUtilsLayoutBinding>()
 
     private val myActivityLauncher =
         registerForActivityResult(TestActivityResultContract()) { result ->
 
-            return_msg.text = "回传数据：$result"
+            binding.returnMsg.text = "回传数据：$result"
         }
     private val myActivityLauncher1 =
         registerForActivityResult(ActivityResultContracts.OpenDocumentTree()) {
@@ -41,7 +45,7 @@ class NavUtilsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_nav_utils_layout)
-        button1.setOnClickListener {
+        binding.button1.setOnClickListener {
             viewModel.Test()
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.P) {
                 var mBiometricPrompt = BiometricPrompt.Builder(this)
@@ -92,18 +96,18 @@ class NavUtilsActivity : AppCompatActivity() {
 
             }
         }
-        button2.setOnClickListener {
+        binding.button2.setOnClickListener {
             var intent = Intent(this, TestActivity::class.java)
             startActivity(intent)
         }
-        button3.setOnClickListener(object : View.OnClickListener {
+        binding.button3.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
                 var intent = Intent(this@NavUtilsActivity, ShootVideoActivity::class.java)
                 startActivity(intent)
             }
 
         })
-        button4.setOnClickListener {
+        binding.button4.setOnClickListener {
             // myActivityLauncher.launch("我要传入数据有点大你忍一忍")
             var intent = Intent(this@NavUtilsActivity, MainActivity4::class.java)
             startActivity(intent)
@@ -112,7 +116,7 @@ class NavUtilsActivity : AppCompatActivity() {
 //            myActivityLauncher1.launch(uri)
 //            LogUtils.e("传入path是："+uri.toString())
         }
-        button5.setOnClickListener {
+        binding.button5.setOnClickListener {
 //            var intent = Intent(this@NavUtilsActivity, MainActivity5::class.java)
 //            startActivity(intent)
 

@@ -67,6 +67,7 @@ public class TagAliasOperatorHelper {
             String logs = "Failed to modify tags, errorCode:" + jPushMessage.getErrorCode();
             Log.e(TAG, logs);
             ToastHelper.showOther(context,logs);
+            //JPushInterface.setAlias(context, sequence, tagAliasBean.alias);
         }
     }
     public void onAliasOperatorResult(Context context, JPushMessage jPushMessage) {

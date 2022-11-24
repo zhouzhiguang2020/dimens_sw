@@ -3,3 +3,6 @@ include ':studymodle'
 
 include ':app', ':lib'
 include ':jpushtest'
+include ':X5app'
+include ':jiguang-demo'
+include ':jiguang'

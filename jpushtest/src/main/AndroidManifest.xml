@@ -16,6 +16,7 @@
     <!-- Required  一些系统要求的权限，如访问网络等-->
     <uses-permission android:name="com.digagr.farming.permission.JPUSH_MESSAGE" />
 
+    <uses-permission android:name="android.permission.ACTION_APP_NOTIFICATION_SETTINGS"/>
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -55,7 +56,7 @@
     <uses-permission android:name="com.heytap.mcs.permission.RECIEVE_MCS_MESSAGE" />
 
     <application
-        android:name=".App"
+        android:name="com.digagr.farming.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"

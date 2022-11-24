@@ -31,7 +31,6 @@ public class App extends Application {
         super.onCreate();
         initToast();
         initKV();
-
         // 初始化SDK
         JPushInterface.setDebugMode(true);
         JPushInterface.init(this);

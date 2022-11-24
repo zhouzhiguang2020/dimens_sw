@@ -1,7 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-    id 'kotlin-android-extensions'
+
 }
 
 android {
@@ -44,7 +44,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation 'com.github.razir.progressbutton:progressbutton:2.1.0'
 
-    implementation "com.google.android.material:material:1.2.0-alpha05"
+    implementation "com.google.android.material:material:1.8.0-alpha03"
 
 
 }

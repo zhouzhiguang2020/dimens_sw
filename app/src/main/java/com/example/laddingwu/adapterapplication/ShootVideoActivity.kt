@@ -1,6 +1,7 @@
 package com.example.laddingwu.adapterapplication
 
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.os.Bundle
 import android.os.FileUtils
 import android.view.View
@@ -14,24 +15,28 @@ import androidx.camera.view.video.OutputFileOptions
 import androidx.camera.view.video.OutputFileResults
 import androidx.core.content.ContextCompat
 import com.apkfuns.logutils.LogUtils
+import com.dylanc.viewbinding.binding
+import com.dylanc.viewbinding.nonreflection.binding
 import com.example.laddingwu.adapterapplication.config.CommonConfig
+import com.example.laddingwu.adapterapplication.databinding.ActivityShootVideoLayoutBinding
 import com.hjq.permissions.OnPermissionCallback
 import com.hjq.permissions.Permission
 import com.hjq.permissions.XXPermissions
-import kotlinx.android.synthetic.main.activity_shoot_video_layout.*
+
 import java.io.File
 
 
 // 测试录制视频
 class ShootVideoActivity : AppCompatActivity(), View.OnClickListener {
     private var mCameraController: LifecycleCameraController? = null
+    private val  binding:ActivityShootVideoLayoutBinding by binding<ActivityShootVideoLayoutBinding>()
     private var isRecording = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_shoot_video_layout)
 
         initCanmer()
-        shoot_video.setOnClickListener(this)
+        binding.shootVideo.setOnClickListener(this)
     }
 
     //初始化相机
@@ -80,7 +85,7 @@ class ShootVideoActivity : AppCompatActivity(), View.OnClickListener {
         //默认后置摄像头
         mCameraController!!.cameraSelector = CameraSelector.DEFAULT_BACK_CAMERA
         // if (mConfig.isCameraAroundState) CameraSelector.DEFAULT_FRONT_CAMERA else CameraSelector.DEFAULT_BACK_CAMERA
-        cameraPreviewView.setController(mCameraController)
+        binding.cameraPreviewView.setController(mCameraController)
         //设置闪光灯模式
         mCameraController!!.imageCaptureFlashMode = ImageCapture.FLASH_MODE_AUTO
     }
