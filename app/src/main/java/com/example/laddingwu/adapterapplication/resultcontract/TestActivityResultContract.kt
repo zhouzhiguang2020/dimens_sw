@@ -27,17 +27,23 @@ OpenMultipleDocuments: 提示用户选择文档（可以选择多个），分别
 OpenDocumentTree: 提示用户选择一个目录，并返回用户选择的作为一个Uri返回，应用程序可以完全管理返回目录中的文档。
  */
 class TestActivityResultContract : ActivityResultContract<String, String>() {
-    override fun createIntent(context: Context, input: String?): Intent {
+    fun createIntents(context: Context, input: String?): Intent {
         var intent = Intent(context, TestActivityResultActivity::class.java)
         intent.putExtra("text", input)
         return intent
 
     }
 
-    override fun parseResult(resultCode: Int, intent: Intent?): String? {
+    override fun createIntent(context: Context, input: String): Intent {
+        return createIntents(context, input)
+    }
+
+    override fun parseResult(resultCode: Int, intent: Intent?): String {
         val data = intent?.getStringExtra("result")
         return if (resultCode == Activity.RESULT_OK && data != null) data
-        else null
+        else {
+            return ""
+        }
 
     }
 }

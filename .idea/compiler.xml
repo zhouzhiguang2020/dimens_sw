@@ -2,17 +2,14 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="1.7">
-      <module name="dimens_sw.app" target="11" />
+      <module name="dimens_sw.app" target="17" />
       <module name="dimens_sw.chatinput" target="1.8" />
       <module name="dimens_sw.imui" target="1.8" />
       <module name="dimens_sw.imuisample" target="1.8" />
-      <module name="dimens_sw.jiguang" target="11" />
-      <module name="dimens_sw.jiguang-demo" target="11" />
-      <module name="dimens_sw.jpushtest" target="11" />
+      <module name="dimens_sw.jpushtest" target="17" />
       <module name="dimens_sw.markers" target="1.8" />
-      <module name="dimens_sw.progressbarbuttom" target="11" />
-      <module name="dimens_sw.studymodle" target="11" />
-      <module name="dimens_sw.X5app" target="11" />
+      <module name="dimens_sw.progressbarbuttom" target="17" />
+      <module name="dimens_sw.studymodle" target="17" />
       <module name="lib" target="1.7" />
     </bytecodeTargetLevel>
   </component>

@@ -55,11 +55,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         int ids = v.getId();
         switch (ids) {
-            case R.id.view_show:
-                LogUtils.e("测试一下");
-                Intent intent = new Intent(this, NavUtilsActivity.class);
-                startActivity(intent);
-                break;
+//            case R.id.view_show:
+//                LogUtils.e("测试一下");
+//                Intent intent = new Intent(this, NavUtilsActivity.class);
+//                startActivity(intent);
+//                break;
         }
 
     }

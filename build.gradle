@@ -1,63 +1,28 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-
 buildscript {
-    
 
-    repositories {
-        mavenCentral()
-        google()
-        // 阿里云云效仓库：https://maven.aliyun.com/mvn/guide
-        maven { url 'https://maven.aliyun.com/repository/jcenter' }
-        maven { url 'https://maven.aliyun.com/repository/google' }
-        // 华为开源镜像：https://mirrors.huaweicloud.com
-        maven { url 'https://repo.huaweicloud.com/repository/maven' }
-        // JitPack 远程仓库：https://jitpack.io
-        maven { url 'https://jitpack.io' }
-        // MavenCentral 远程仓库：https://mvnrepository.com
-
-        maven {
-            url 'https://mirrors.huaweicloud.com/repository/maven/huaweicloudsdk/'
-        }
-        maven {
-            url 'https://oss.jfrog.org/artifactory/oss-snapshot-local'
-        }
-    }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.3.1'
-        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10'
 
-        //使用cc组件化
-        classpath 'com.billy.android:cc-register:1.1.2'
-        //classpath "io.realm:realm-gradle-plugin:7.0.8"
-        //classpath "io.realm:realm-gradle-plugin:7.1.0-SNAPSHOT"
+        //classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2' // 添加插件 更好支持GreenDao
+        classpath 'org.greenrobot:greendao-gradle-plugin:+'
+        classpath 'io.github.kongpf8848:version-plugin:1.0.1'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
-        classpath 'io.github.kongpf8848:version-plugin:1.0.1'
     }
 }
+plugins {
+    id 'com.android.application' version '8.1.0' apply false
+    id 'com.android.library' version '8.1.0' apply false
+    id 'org.jetbrains.kotlin.android' version '1.8.20' apply false
+    id 'org.jetbrains.kotlin.jvm' version '1.8.20' apply false
+    id 'org.jetbrains.kotlin.kapt' version '1.8.20' apply false
 
-allprojects {
-    repositories {
-        mavenCentral()
-        google()
-        // 阿里云云效仓库：https://maven.aliyun.com/mvn/guide
-        maven { url 'https://maven.aliyun.com/repository/jcenter' }
-        maven { url 'https://maven.aliyun.com/repository/google' }
-        // 华为开源镜像：https://mirrors.huaweicloud.com
-        maven { url 'https://repo.huaweicloud.com/repository/maven' }
-        // JitPack 远程仓库：https://jitpack.io
-        maven { url 'https://jitpack.io' }
-        // MavenCentral 远程仓库：https://mvnrepository.com
-
-        maven {
-            url 'https://mirrors.huaweicloud.com/repository/maven/huaweicloudsdk/'
-        }
-        maven {
-            url 'https://oss.jfrog.org/artifactory/oss-snapshot-local'
-        }
-    }
 }
+
 
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+
+
