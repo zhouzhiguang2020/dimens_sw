@@ -60,5 +60,3 @@ include ':studymodle'
 
 include ':app', ':lib'
 
-include ':X5app'
-

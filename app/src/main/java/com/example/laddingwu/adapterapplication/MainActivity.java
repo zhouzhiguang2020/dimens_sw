@@ -32,15 +32,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void run() {
                 DisplayMetrics dm = new DisplayMetrics();
                 getWindowManager().getDefaultDisplay().getMetrics(dm);
-                Log.e("查看宽度分辨率：", String.valueOf(dm.widthPixels));
-                Log.e("查看高度分辨率：", String.valueOf(dm.heightPixels));
+                LogUtils.e("查看宽度分辨率：" + String.valueOf(dm.widthPixels));
+                LogUtils.e("查看高度分辨率：" + String.valueOf(dm.heightPixels));
                 String reswidth = String.valueOf(DensityUtil.px2dip(MainActivity.this, dm.widthPixels));
                 String resheigh = String.valueOf(DensityUtil.px2dip(MainActivity.this, dm.heightPixels));
-                Log.e("转成DP的宽：", "www" + reswidth);
-                Log.e("转成DP的高：", "ggg" + resheigh);
+                LogUtils.e("转成DP的宽：" + "www" + reswidth);
+                //1280 * 720
+                LogUtils.e("转成DP的高：" + "ggg" + resheigh);
                 int width = Math.min(dm.widthPixels, dm.heightPixels);
                 tv1.setText("分辨率：" + dm.widthPixels + "*" + dm.heightPixels + " 屏幕 dpi是 : " + dm.densityDpi + "   smallest width pixels : " + width);
                 tv2.setText("计算出来的smallestWidth : " + width / (dm.densityDpi / 160.0) + "dp");
+                 //490dp
                 tv3.setText("实际使用的smallestWidth :  " + getResources().getString(R.string.base_dpi));
                 tv4.setText("当前手机： " + SystemUtil.getDeviceBrand() + "  " + SystemUtil.getSystemModel() + " \n" + "当前系统： " + SystemUtil.getSystemVersion() + "转出dp ");
                 LinearLayout.LayoutParams p = (LinearLayout.LayoutParams) view.getLayoutParams();
